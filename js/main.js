@@ -1,12 +1,31 @@
 'use strict';
 
-(function($) {
-    $(function() {
-        $('ul.tabs').on('click', 'li:not(.active)', function() {
-            $(this)
-                .addClass('active').siblings().removeClass('active');
-                $('ul.tabs-content').find('li.tab-content').removeClass('is-open').eq($(this).index()).addClass('is-open');
-        });
-
+//slow scroll to anchor animation
+$(document).ready(function(){
+    $("a[href*=#]").on("click", function(e){
+        let anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top
+        }, 777);
+        e.preventDefault();
+        return false;
     });
-})(jQuery);
+});
+
+///scroll to top animation
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+        $('#button').addClass('show');
+    } else {
+        $('#button').removeClass('show');
+    }
+});
+
+$('#button').on('click', function(e) {
+    $('html, body').animate({scrollTop:0}, '3000');
+});
+
+$('#toggle').click(function () {
+    $("#top-section").slideToggle("slow");
+
+});

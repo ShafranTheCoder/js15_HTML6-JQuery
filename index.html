@@ -7,23 +7,27 @@
   <link rel="stylesheet" href="css/reset.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+
   <title>Design Architecture</title>
+
 </head>
 <body>
+<a id="button"></a>
   <header class="header">
     <div class="site-logo">
       <a class="site-logo-link" href="#"><img src="img/logo-img.svg" alt="Logotype"></a>
       <a class="site-name-link" href="#">Architect</a>
-    </div>    
+    </div>
     <div class="site-navbar">
       <ul class="site-navbar-items">
         <li><a href="#">home</a></li>
-        <li><a href="#">architecture design</a></li>
-        <li><a href="#">strange buildings</a></li>
-        <li><a href="#">magazine</a></li>
-        <li><a href="#">blog</a></li>
-        <li><a href="#">news</a></li>
+        <li><a href="#most-popular-posts">most popular posts</a></li>
+        <li><a href="#most-popular-clients">most popular clients</a></li>
+        <li><a href="#top-rated">top rated</a></li>
+        <li><a href="#hot-news">hot news</a></li>
       </ul>
     </div>
     <div class="site-search">
@@ -31,15 +35,17 @@
     </div>
   </header>
   <!-- /.header -->
-  <section class="top-section">
+  <section id="top-section" class="top-section ">
     <div class="top-section-headline">THE LATEST NEWS ON DESIGN & ARCHITECTURE</div>
     <div class="top-section-buttons">
       <button class="top-section-left-btn">Subscribe Now</button>
       <button class="top-section-right-btn">Best Articles</button>
     </div>
   </section>
+  <button id="toggle" class="btn btn-warning">Toggle it</button>
   <!-- /.top-sectiob -->
   <section class="most-popular-posts">
+    <a id="most-popular-posts" class="scrollto"></a>
     <div class="most-popular-posts-headline">Most popular posts</div>
     <div class="most-popular-posts-cards">
       <div class="most-popular-cards-card most-popular-card-card1">
@@ -65,11 +71,12 @@
       <div class="most-popular-cards-card most-popular-card-card6">
         <img src="img/section2/post-6-img.png" alt="Image6">
         <a href="#">Glorious Expanse Hotel in France</a>
-      </div>  
+      </div>
     </div>
   </section>
   <!-- /.most-popular-posts -->
   <section class="most-popular-clients">
+    <a id="most-popular-clients" class="scrollto"></a>
     <div class="most-popular-clients-headline">our most popular clients</div>
     <div class="most-popular-clients-logos">
       <div class="most-popular-clients-logo most-popular-clients-logo1">
@@ -88,6 +95,7 @@
   </section>
   <!-- /.most-popular-clients -->
   <section class="top-rated">
+    <a id="top-rated" class="scrollto"></a>
     <div class="top-rated-headline">Top rated</div>
     <div class="top-rated-pictures">
       <div class="top-rated-picture top-rated-picture1">
@@ -112,6 +120,7 @@
   </section>
   <!-- /.top-rated -->
   <section class="hot-news">
+    <a id="hot-news" class="scrollto"></a>
     <div class="hot-news-headline">hot news</div>
     <div class="hot-news-blocks">
       <div class="hot-news-block hot-news-block1">
@@ -162,6 +171,8 @@
     <div class="footer-logo">
       <img src="img/footer-logo.png" alt="Footer-logo" align="left">LIOIT
     </div>
-  </footer>  
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
